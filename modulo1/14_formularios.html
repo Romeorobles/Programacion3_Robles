@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario dinámico</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 5px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .mensaje {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Formulario</h1>
+
+    <form id="formulario">
+        <table>
+            <tr>
+                <td><label for="nombre">Nombre</label></td>
+                <td><input type="text" id="nombre" name="nombre" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Correo Electrónico</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+
+            <tr>
+                <td><label for="password">Contraseña</label></td>
+                <td><input type="password" id="password" name="password" required minlength="6"></td>
+            </tr>
+
+            <!-- NUMÉRICO -->
+            <tr>
+                <td><label for="edad">Edad</label></td>
+                <td><input type="number" id="edad" name="edad" min="1" max="100" required></td>
+            </tr>
+
+            <!-- NUMÉRICO -->
+            <tr>
+                <td><label for="telefono">Teléfono</label></td>
+                <td><input type="number" id="telefono" name="telefono" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Género</label></td>
+                <td>
+                    <input type="radio" name="genero" value="Masculino"> Masculino
+                    <input type="radio" name="genero" value="Femenino"> Femenino
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="pais">País</label></td>
+                <td>
+                    <select id="pais" name="pais">
+                        <option>Ecuador</option>
+                        <option>Colombia</option>
+                        <option>Perú</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <button type="submit">Enviar</button>
+        <p class="mensaje" id="mensaje"></p>
+    </form>
+
+    <script>
+        const form = document.getElementById("formulario");
+        const mensaje = document.getElementById("mensaje");
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const nombre = document.getElementById("nombre").value;
+            const edad = document.getElementById("edad").value;
+
+            mensaje.textContent = "sus datos han sido enviados correctamente, " + nombre + " (" + edad + " años)";
+            mensaje.style.color = "green";
+        });
+    </script>
+
+</body>
+</html>
