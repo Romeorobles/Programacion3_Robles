@@ -14,12 +14,3 @@ if (isNaN(edad)) {
 
 
 
-
-const prompt = require("prompt-sync")();
-
-const montoTexto = prompt("Ingresa el monto de la compra: ");
-const monto = parseFloat(montoTexto);
-
-if (monto > 100) {
-    console.log("Aplica descuento");
-}

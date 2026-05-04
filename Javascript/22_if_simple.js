@@ -23,3 +23,9 @@
     if (stockDisponible <= UMBRAL_STOCK_BAJO) {
     console.log(`⚠️ Stock bajo: quedan ${stockDisponible} unidades. Reabastecer pronto.`);
     }
+
+
+
+
+
+

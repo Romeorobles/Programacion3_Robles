@@ -1,15 +1,12 @@
-
-
-
 const prompt = require("prompt-sync")();
-const productostexto = promt("ingresa el numero de productos: ");
-const productos = parseInt(productostexto, 10);
 
-if (productos > 10) {
-    console.log("Descuento aplicado");
+const numero1Texto = prompt("Escribe el primer número: ");
+const numero1 = parseFloat(numero1Texto);
+
+if (numero1 <= 100) {
+    console.log("Consumo bajo de energía");
+} else if (numero1 < 500) {
+    console.log("El consumo de energía es medio");
 } else {
-    console.log("No aplica descuento");
-
+    console.log("El consumo de energía es alto");
 }
-
-

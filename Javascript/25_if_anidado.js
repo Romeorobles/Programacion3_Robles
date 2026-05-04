@@ -102,3 +102,18 @@
     // Precio base: $200.00
     // Detalle:    IVA 15% incluido + 5% bonificación miembro
     // Precio final: $218.50
+
+
+
+
+const prompt = require("prompt-sync")();
+const total_compra = parseFloat(prompt("Ingrese el total de su compra: $"));
+
+if (total_compra >= 50) {
+    const descuento = total_compra * 0.10;
+    const total_final = total_compra - descuento;
+    console.log(`Descuento especial: $${descuento.toFixed(2)}`);
+    console.log(`Total a pagar: $${total_final.toFixed(2)}`);
+
+    console.log
+}
