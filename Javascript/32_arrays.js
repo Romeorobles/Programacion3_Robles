@@ -229,3 +229,38 @@ console.log(numerosBusqueda.includes(99)); // false
     const plano   = anidado.reduce((acum, arr) => [...acum, ...arr], []);
     console.log(plano);   // [1, 2, 3, 4, 5, 6]
     // alternativa moderna: anidado.flat()
+
+
+
+
+
+
+// Ejercicio en clase.
+const celsius = [0, 15, -5, 22, 37, 100, -10, 28];
+
+const fahrenheit = celsius.map(c => c * 9/5 + 32);
+
+const entre = celsius.filter(c => c >= 0 && c <= 30);
+
+const resultado = entre.map(c => c * 9/5 + 32);
+
+console.log("Fahrenheit:", fahrenheit);
+console.log("Entre 0 y 30:", entre);
+console.log("Entre 0 y 30 en F:", resultado);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
